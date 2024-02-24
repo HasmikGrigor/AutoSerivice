@@ -1,0 +1,726 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.preloader{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(219, 212, 212);
+  z-index: 3;
+}
+.loader{
+  width: 150px;
+  height: 150px;
+  border:12px dashed rgb(218, 211, 211) ;
+  border-radius: 50%;
+  border-top: 12px dashed rgb(130, 130, 131);
+  animation: spin 0.7s  linear infinite;
+}
+.hidden{
+  display: none;
+}
+#header{
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background-image: url(../images/header.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+ }
+ nav{
+  width: 100%;
+  display: flex;
+  justify-content:space-evenly;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+.lang-site{
+  margin:20px;
+  order: 1;
+}
+.btn{
+  border: none;
+  display: block;
+  background-color: transparent; 
+  cursor: pointer;
+  order: 2;
+}
+.btn>.fa-sun,
+.btn>.fa-moon{
+  color:white;
+  font-size: 20px;
+  
+}
+body.dark{
+  background-color: rgba(20, 20, 34, 0.712);
+  color: white;
+}
+body.dark #diagnostic-header{
+  background-color: rgb(53, 52, 52);
+}
+.menuXmark{
+  font-size: 20px;
+  background-color: transparent;
+  right:150px
+}
+.mini-menu{
+  display: flex;
+ 
+}
+.menuBtn{
+  display: none;
+  top:30px;
+  background-color: transparent;
+  color: white;
+}
+.fa-xmark{
+  display: none;
+}
+.info{
+  width: 20%;
+  height: auto;
+  position: absolute;
+  padding:20px ;
+  right: 150px;
+  top:400px;
+  margin: 20px;
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 20px;
+ }
+.card-container,.time-container{
+  width: 400px;
+  height: auto;
+  font-size: 20px;
+  background: linear-gradient(43deg,#db2727,#fa2a2a,#3a6782,#3d1ce9);
+  background-size: 240% 240%;
+  animation: gradient-animation 8s ease infinite;
+  text-align: center;
+  border-radius: 50px;
+  padding: 10px;
+}
+.mini-menu>ul>li,
+.social-media>ol>li{
+  float: left;
+  color: white;
+  margin: 20px ;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.social-media>ol>li,
+.btn{
+  animation: Effect 4s ease 2s alternate infinite ;
+}
+a{
+    text-decoration: none;
+    color: white;  
+}
+.progress-container{
+  width: 100%;
+  height: 8px;
+  background-color: grey;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+.progress-mini{
+  height: 8px;
+  border-radius: 5px;
+  background-color:rgb(39, 18, 134);
+}
+#diagnostic-header{
+  width: 100%;
+  height: auto;
+  padding: 50px;
+  background-color: #f0eeee;
+}
+#diagnostic-header>h1{
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 70px; 
+}
+.diagnostic-section{
+  width: 100%;
+  display: flex;
+}
+.diagnostic{
+  width: 40%;
+  background-image: url(../images/diagnostic.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.diagnostic-mini{
+  width: 60%;
+}
+.diagnostic-all>img{
+  width: 80px;
+  height: 60px;
+  margin: 10px;
+}
+.diagnostic-all{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.diagnostic-all>h2{
+  margin: 20px ;
+}
+#services-brakeDiscs{
+  width: 100%;
+  height: auto;
+  padding: 100px;
+  background-image: url(../images/breakDiskHeader.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  font-size: 25px;
+  color: white;
+  overflow-x: hidden;
+}
+.service-header{
+  width: 100%;
+  padding: 50px;
+}
+.service-header>h1{
+  width: 100%;
+  padding: 20px;
+  color: white;
+  margin: auto;
+  text-align: center;
+  font-size: 50px;
+  text-decoration:dashed;
+}
+.carousel{
+  width: max-content;
+  display: flex;
+  position: relative;
+  transform: translate(0);
+  transition: all 0.8s;
+}
+.services-text{
+  width: 500px;
+  height: 200px;
+  text-align: center;
+  color: black;
+  background-color: rgb(228, 222, 222);
+  border: 2px solid rgb(53, 52, 52);
+  border-radius: 30px;
+  margin:  10px 80px;
+  padding: 30px;
+  flex-shrink: 0;
+}
+.fa-angles-left,
+.fa-angles-right{
+  position: relative;
+  left:45%;
+  top:15%;
+  margin:10px;
+  font-size: 40px; 
+  cursor: pointer;
+}
+#when-break{
+    background-image: url(../images/when__content.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin-top: 60px;
+    height: 1079px; 
+}
+.when-list{
+    width: 100%;
+    position: relative;
+}
+.when-list>.when-item{
+    position: absolute;
+    list-style-type: none;  
+}
+.when-item{
+    width: 200px;
+}
+.when-item>h2{
+    font-size: 20px;
+}
+.when-item>*{
+    font-weight: 700;
+    font-size: 28px;
+    color: rgb(8, 8, 8);
+    line-height: 1.3;
+    text-align: justify;
+}
+.when-item-1{
+    font-size: 25px;
+    line-height: 1.7;
+    right:75%;
+    top:60px
+}
+.when-item-2{
+    font-size: 25px;
+    line-height: 1.7;
+    left:72%;
+    top:60px
+}
+.when-item-3{
+    font-size: 25px;
+    line-height: 1.7;
+    right: 74%;
+    top:450px
+}
+.when-item-4{
+    font-size: 20px;
+    line-height: 1.5;
+    left:70%;
+    top:460px
+}
+.when-item-5{
+    font-size: 25px;
+    line-height: 1.7;
+    right:72%;
+    top:800px
+}
+.when-item-6{
+    font-size: 20px;
+    line-height: 1.5;
+    left:72%;
+    top:800px
+}
+.when-item-7{
+    font-size: 20px;
+    line-height: 1.5;
+    left:45%;
+    top:800px
+}
+.when-item>span{
+    color: rgb(223, 3, 3);
+}
+#advantages{
+    width: 100%;
+    height: 1200px;
+    background-image: url(../images/advantagesHeader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;  
+}
+.advantages-header{
+    width: 100%;
+    height: 1200px;
+    background-color: rgba(0, 0, 0, 0.534);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+}
+.advantages-header>h1{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    padding: 50px;
+}
+#advantages-mini{
+    width: 40%; 
+}
+.mini{
+    height: 170px;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    background: linear-gradient(43deg,#db2727,#fa2a2a,#3a6782,#3d1ce9);
+    background-size: 240% 240%;
+    animation: gradient-animation 8s ease infinite;
+  }
+body{
+  overflow-x: hidden;
+}
+.image{
+  width: 400px;
+  height: 300px;
+  border-radius:20px;
+  transform: rotateY(0deg);
+  transition: all 2s;
+}
+#advantages-mini>h2{
+  margin:50px auto;  
+}
+.show{
+  transform: translateX(0);
+}
+.rotatebox{
+  transform: rotateY(360deg);
+}
+.fa-solid:hover{
+  transform: scale(2,2);
+  transition: all 0.8s;
+}
+.services-text:hover{
+  background: rgb(26, 24, 24);
+  color: white;
+}
+footer{
+  width: 100%;
+  height: 300px;
+  background-color: rgb(31, 31, 82);
+}
+.footer-header{
+  width: 100%;
+  display: flex;
+  color: white;
+}
+.footer-menu>ul>li,
+.footer-icons>ol>li{
+  border-radius: 50px;
+  text-align: center;
+  background: linear-gradient(43deg,#db2727,#fa2a2a,#3a6782,#3d1ce9);
+  background-size: 240% 240%;
+  animation: gradient-animation 8s ease infinite;
+  color: white;
+  margin: 20px ;
+  overflow: hidden;
+  list-style-type: none;
+}
+.footer-menu,
+.footer-icons{
+  width: 15%;
+}
+iframe{
+  width: 1100px;
+  height: 300px;
+}
+@keyframes text-move{
+    from {
+        width: 50px;
+        height: 50px;
+      }
+      50% {
+        width: 100%;
+        height: 50px;
+      }
+      to {
+        width: 100%;
+        height: 100%;
+      }
+}
+
+  @keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+  }
+  @keyframes Effect{
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.5, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @media only screen and (max-width:992px){
+   nav{
+    position: relative;
+   
+   }
+  #header li{
+    flex-direction: column;
+    padding: 10px;
+   }
+   .menu{
+    position: absolute;
+    top:80px
+   }
+   .mini-menu{
+    flex-direction: column;
+    
+    display: none;
+    
+   }
+  .mini-menu,
+  .social-media{
+    
+    text-align: center;
+    transition: all 1s;
+    display: none;
+    font-size: 20px;
+  }
+  .social-media>ol{
+    overflow: hidden;
+    width: 200px;
+    margin:auto
+  }
+  .mini-menu>ul>li,
+  .social-media>ol>li{
+    margin: 5px ;
+    font-size: 15px;
+  }
+  .menuBtn{
+   display: block;
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   right: 20px;
+   text-align: center;
+   background-color: transparent;
+   order: 3;
+  }
+ 
+ 
+  .hidden{
+      display: none;
+  }
+  .fa-xmark{
+    display: none;
+  }
+  .showMenu{
+    display: block;
+    background-color:rgba(31, 31, 82, 0.596);
+    top:80px;
+    left:500px
+   }
+  .menuBtn{
+    order: 2;
+  }
+  .btn>.fa-sun,
+  .btn>.fa-moon{
+  color:white;
+  font-size: 15px;
+  margin:10px auto;
+  
+}
+  .info{
+    height: 100px;
+    font-size: 20px;
+    right:50%
+  }
+  .time{
+    padding: 10px;
+  }
+  .card{
+    padding: 10px;
+    width: 240px;
+  }
+  .card>img{
+    width: 40px;
+  }
+  #diagnostic-header{
+    padding: 0;
+  }
+  #diagnostic-header>h1{
+    padding: 20px;
+    font-weight: 600;
+    font-size: 50px;
+  }
+  .diagnostic-section{
+    display: block;
+  }
+  .diagnostic,
+  .diagnostic-mini{
+    width: 100%;
+    height: 600px;
+   
+  }
+  .diagnostic-mini{
+    width: 90%;
+   
+  }
+  #services-brakeDiscs{
+    padding: 0;
+  }
+  .service-header {
+    padding: 0;
+  }
+  .service-header>h1{
+    font-size: 35px;
+  }
+  .services-text{
+    width: 400px;
+    height: 150px;
+    margin:20px 40px;
+    padding: 15px;
+  }
+  .fa-solid:hover{
+    transform: scale(1.5,1.5);
+    transition: all 0.8s;
+  }
+  #when-break{
+    display: none;
+  }
+ 
+  #advantages{
+   
+    height: auto;
+    display: block;
+    text-align: center;
+  }
+  .advantages-header{
+    height: auto;
+  }
+  .advantages-header>h1{
+    font-size: 35px;
+    margin:20px
+  }
+  #advantages-mini>h2{
+    width: 100%;
+    margin:20px auto;
+}
+  #advantages-mini{
+    width: 100%;
+    display: block;
+  }
+  .service-header>h1{
+    width: 90%;
+  }
+  .footer-header{
+    width: 100%;
+    justify-content: center;
+  }
+  .footer-menu{
+    width: 200px;
+  }
+ .footer-icons{
+  width: 100px;
+ }
+ .footer-map{
+  width: 50%;
+ }
+ iframe{
+  width: 100%;
+  height: 290px;
+ }
+}
+@media  only screen and (max-width:600px){
+  nav{
+    font-size: 16px;
+  }
+  .menu{
+    top:70px
+  }
+  .showMenu{
+    width: 700px;
+  }
+  .mini-menu{
+    background-color: #261386ee;
+  }
+.mini-menu>ul>li{
+    float: none;
+  }
+
+.menuBtn{
+  width: 20px;
+  height: 20px;
+}
+.info{
+  width: 50%;
+  margin:auto;
+  text-align: center;
+}
+.card-container,
+.time-container{
+  width: 300px;
+  font-size: 15px;
+  border-radius: 50px;
+}
+  #diagnostic-header{
+    padding: 0;
+  }
+  #diagnostic-header>h1{
+    font-size: 30px;
+    padding: 20px;
+  }
+  .diagnostic-section{
+    text-align: center;
+    font-size: 80px;
+  }
+  .diagnostic{
+    width: 100%;
+    margin: auto
+  }
+  .diagnostic-mini{
+    height: auto;
+    margin: 0;
+  }
+  .diagnostic-all{
+    display: block;
+  }
+  .diagnostic-all>img {
+    width: 150px;
+    height: 80px;
+  }
+  #services-brakeDiscs{
+    padding: 0;
+    font-size: 20px;
+  }
+  .service-header>h1{
+    padding: 0;
+    font-size: 20px;
+  }
+  .fa-solid{
+    font-size: 15px;
+  }
+  .services-text{
+    width: 180px;
+    height: 110px;
+    padding: 5px;
+    margin:5px
+  }
+  #advantages-mini>img{
+    width: 80%;
+  }
+  .advantages-header>h1{
+    font-size: 25px;
+    margin:0
+  }
+  #when-break{
+    display: none;
+  }
+  footer{
+    height: auto;
+    padding: 20px;
+  }
+  .footer-header{
+    display: block;
+  }
+  .footer-menu,
+  .footer-icons{
+    width: 300px;
+    margin: auto;
+  }
+ .footer-map{
+  width: 100%;
+ }
+ iframe{
+  width: 100%;
+  margin:0 auto
+ }
+ 
+}
